@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
+import {useTheme} from "../store/theme-context"
 
 function Header() {
-  const { theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+  const themeHandler = () => {
+    toggleTheme(theme === "dark" ? "light" : "dark");
   };
 
   const themeIcon =
@@ -38,7 +39,7 @@ function Header() {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            onClick={toggleTheme}
+            onClick={themeHandler}
             className="p-3 bg-gray-200 dark:bg-gray-800 rounded focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
             {themeIcon}
           </button>
