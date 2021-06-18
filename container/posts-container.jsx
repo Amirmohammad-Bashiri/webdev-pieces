@@ -1,11 +1,11 @@
-import PostItem from "./post-item";
+import PostItem from "../components/posts/post-item";
 
-function PopularPosts() {
+function PostsContainer({ header }) {
   return (
     <section className="py-8 max-w-6xl">
       <div className="container mx-auto px-10 md:px-32">
         <h1 className="mb-7 font-bold md:tracking-wide text-4xl text-gray-900 dark:text-gray-50">
-          Popular Posts
+          {header}
         </h1>
 
         <div className="max-w-3xl">
@@ -16,4 +16,4 @@ function PopularPosts() {
   );
 }
 
-export default PopularPosts;
+export default PostsContainer;
