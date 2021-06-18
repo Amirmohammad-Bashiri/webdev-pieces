@@ -16,6 +16,7 @@ export function getStaticProps() {
     props: {
       popularPosts,
     },
+    revalidate: 24 * 60 * 60,
   };
 }
 
