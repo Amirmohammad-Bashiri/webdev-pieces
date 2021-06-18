@@ -1,4 +1,4 @@
-import PostItem from "./PostItem";
+import PostItem from "./post-item";
 
 function PopularPosts() {
   return (
@@ -8,7 +8,6 @@ function PopularPosts() {
           Popular Posts
         </h1>
 
-        {/* Posts */}
         <div className="max-w-3xl">
           <PostItem />
         </div>
