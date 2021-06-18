@@ -1,6 +1,5 @@
 import Link from "next/link";
-// import { useTheme } from "next-themes";
-import {useTheme} from "../store/theme-context"
+import { useTheme } from "../store/theme-context";
 
 function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -48,7 +47,7 @@ function Header() {
             <Link href="/">
               <a>Home</a>
             </Link>
-            <Link href="/all-posts">
+            <Link href="/posts">
               <a>Posts</a>
             </Link>
             <Link href="/newsletter">

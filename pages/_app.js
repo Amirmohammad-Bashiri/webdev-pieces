@@ -1,4 +1,3 @@
-// import { ThemeProvider } from "next-themes";
 import ThemeProvider from "../store/theme-context";
 
 import Layout from "../container/layout";
