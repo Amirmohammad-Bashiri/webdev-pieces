@@ -1,4 +1,5 @@
 ---
+id: "1"
 title: "Getting Started with NextJS"
 date: "2022-10-16"
 image: getting-started-nextjs.png

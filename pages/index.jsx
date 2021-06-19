@@ -1,5 +1,5 @@
 import PostsContainer from "../container/posts-container";
-import { getAllPosts } from "../lib/posts-util";
+import { getPopularPosts } from "../lib/posts-util";
 
 function HomePage({ popularPosts }) {
   return (
@@ -10,7 +10,7 @@ function HomePage({ popularPosts }) {
 }
 
 export function getStaticProps() {
-  const popularPosts = getAllPosts();
+  const popularPosts = getPopularPosts();
 
   return {
     props: {
