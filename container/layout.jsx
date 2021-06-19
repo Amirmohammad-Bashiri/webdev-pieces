@@ -11,7 +11,7 @@ function Layout({ children }) {
       <Head>
         <title>Webdev Nuggets</title>
       </Head>
-      <div className="bg-white dark:bg-black">
+      <div className="bg-white dark:bg-black min-h-screen">
         <div className="container mx-auto max-w-6xl">
           <Header />
           {children}
