@@ -8,7 +8,7 @@ function PostHeader({ title, date, image, slug }) {
       <h1 className="font-bold text-4xl md:text-5xl tracking-wider text-gray-900 dark:text-gray-50 mb-4 md:mb-6">
         {title}
       </h1>
-      <p className="text-base text-gray-500 dark:text-gray-400 mb-5 md:mb-7">
+      <p className="text-base text-gray-600 dark:text-gray-400 mb-5 md:mb-7">
         {date}
       </p>
 

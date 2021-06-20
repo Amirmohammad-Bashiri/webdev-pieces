@@ -1,18 +1,19 @@
 import PostHeader from "../../components/posts/post-header";
+import PostContent from "../../components/posts/post-content";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 function PostDetailPage({ post }) {
-  console.log(post);
   return (
     <main className="bg-white dark:bg-black">
-      <article className="container mx-auto py-10 px-8 md:px-32">
+      <div className="container mx-auto py-10 px-8 md:px-32">
         <PostHeader
           title={[post.title]}
           date={post.date}
           image={post.image}
           slug={post.slug}
         />
-      </article>
+        <PostContent post={post} />
+      </div>
     </main>
   );
 }
