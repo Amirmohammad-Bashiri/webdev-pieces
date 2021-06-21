@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import coldDarkCold from "react-syntax-highlighter/dist/cjs/styles/prism/coldark-cold";
+import coldDarkCold from "react-syntax-highlighter/dist/cjs/styles/prism/material-light";
 import materialDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
