@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import PostHeader from "../../components/posts/post-header";
 import PostContent from "../../components/posts/post-content";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
@@ -5,6 +7,10 @@ import { getPostData, getPostsFiles } from "../../lib/posts-util";
 function PostDetailPage({ post }) {
   return (
     <main className="pt-28 md:pt-40 bg-white dark:bg-black">
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
       <div className="container mx-auto py-10 px-6 md:px-14 lg:px-32">
         <PostHeader
           title={[post.title]}
