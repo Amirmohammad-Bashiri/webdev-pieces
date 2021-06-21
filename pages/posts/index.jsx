@@ -1,14 +1,18 @@
-<<<<<<< HEAD
-function PostsPage() {
-  return <section>posts page</section>;
-=======
-import { getAllPosts } from "../../lib/posts-util";
+import Head from "next/head";
 
+import { getAllPosts } from "../../lib/posts-util";
 import PostsContainer from "../../container/posts-container";
 
 function PostsPage({ posts }) {
   return (
     <section className="pt-32 md:pt-44">
+      <Head>
+        <title>All Posts | Nuggets</title>
+        <meta
+          name="description"
+          content="A list of all of my webdev-related posts"
+        />
+      </Head>
       <PostsContainer header="All Posts" posts={posts} />
     </section>
   );
@@ -23,7 +27,6 @@ export function getStaticProps() {
     },
     revalidate: 60 * 10,
   };
->>>>>>> 508a1b55461f035cb9c6e7218652546d2a207bf5
 }
 
 export default PostsPage;

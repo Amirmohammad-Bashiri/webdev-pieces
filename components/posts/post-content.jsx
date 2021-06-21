@@ -3,11 +3,13 @@ import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import coldDarkCold from "react-syntax-highlighter/dist/cjs/styles/prism/coldark-cold";
 import materialDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
-import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 
 import { useTheme } from "../../store/theme-context";
 
-SyntaxHighlighter.registerLanguage("js", js);
+SyntaxHighlighter.registerLanguage("jsx", jsx);
+SyntaxHighlighter.registerLanguage("bash", bash);
 
 function PostContent({ post }) {
   const { theme } = useTheme();

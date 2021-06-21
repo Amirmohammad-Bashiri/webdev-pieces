@@ -21,4 +21,23 @@ function printBasics() {
 printBasics();
 ```
 
+```bash
+# bash
+npm install react
+```
+
+```jsx
+import React, {useState} from "react";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(prevState => prevState + 1)}>{count}</button>
+    </div>
+  )
+}
+```
+
 Learn more about it [here](https://academind.com).
