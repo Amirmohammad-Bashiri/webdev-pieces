@@ -3,9 +3,9 @@ import { getPopularPosts } from "../lib/posts-util";
 
 function HomePage({ popularPosts }) {
   return (
-    <div>
+    <section className="pt-32 md:pt-44">
       <PostsContainer header="Popular Posts" posts={popularPosts} />
-    </div>
+    </section>
   );
 }
 
