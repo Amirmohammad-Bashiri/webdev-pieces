@@ -13,7 +13,13 @@ function PostHeader({ title, date, image, slug }) {
       </p>
 
       <div className="text-center">
-        <Image src={imagePath} alt={title} width={800} height={450} />
+        <Image
+          className="rounded"
+          src={imagePath}
+          alt={title}
+          width={800}
+          height={450}
+        />
       </div>
     </div>
   );
