@@ -4,7 +4,7 @@ import PostsContainer from "../../container/posts-container";
 
 function PostsPage({ posts }) {
   return (
-    <section>
+    <section className="pt-32 md:pt-44">
       <PostsContainer header="All Posts" posts={posts} />
     </section>
   );
