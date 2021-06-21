@@ -4,8 +4,8 @@ import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 function PostDetailPage({ post }) {
   return (
-    <main className="bg-white dark:bg-black">
-      <div className="container mx-auto py-10 px-8 md:px-32">
+    <main className="pt-28 md:pt-40 bg-white dark:bg-black">
+      <div className="container mx-auto py-10 px-6 md:px-14 lg:px-32">
         <PostHeader
           title={[post.title]}
           date={post.date}

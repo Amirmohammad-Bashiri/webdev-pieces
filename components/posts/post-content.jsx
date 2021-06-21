@@ -26,8 +26,8 @@ function PostContent({ post }) {
             <Image
               src={`/images/posts/${post.slug}/${image.properties.src}`}
               alt={image.alt}
-              width={600}
-              height={300}
+              width={800}
+              height={400}
             />
           </div>
         );
@@ -54,7 +54,7 @@ function PostContent({ post }) {
   return (
     <article className="container mx-auto py-20">
       <ReactMarkdown
-        className="space-y-3 text-gray-700 dark:text-gray-200 text-lg"
+        className="space-y-5 md:space-y-7 text-gray-700 dark:text-gray-200 text-lg lg:text-xl"
         components={renderers}>
         {post.content}
       </ReactMarkdown>
