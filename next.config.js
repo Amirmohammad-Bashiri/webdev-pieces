@@ -14,6 +14,10 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: ContentSecurityPolicy.replace(/\n/g, ""),
   },
+  {
+    key: "X-Frame-Options",
+    value: "SAMEORIGIN",
+  },
 ];
 
 module.exports = {
