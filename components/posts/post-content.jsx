@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import coldDarkCold from "react-syntax-highlighter/dist/cjs/styles/prism/material-light";
+import materialLight from "react-syntax-highlighter/dist/cjs/styles/prism/material-light";
 import materialDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
@@ -14,7 +14,7 @@ SyntaxHighlighter.registerLanguage("bash", bash);
 function PostContent({ post }) {
   const { theme } = useTheme();
 
-  const syntaxStyle = theme === "light" ? coldDarkCold : materialDark;
+  const syntaxStyle = theme === "light" ? materialLight : materialDark;
 
   const renderers = {
     p(paragraph) {
@@ -24,7 +24,7 @@ function PostContent({ post }) {
         const image = node.children[0];
 
         return (
-          <div className="text-center my-20">
+          <div className="my-20 text-center">
             <Image
               src={`/images/posts/${post.slug}/${image.properties.src}`}
               alt={image.alt}
@@ -54,9 +54,9 @@ function PostContent({ post }) {
   };
 
   return (
-    <article className="container mx-auto py-20">
+    <article className="container py-20 mx-auto">
       <ReactMarkdown
-        className="space-y-5 md:space-y-7 text-gray-700 dark:text-gray-200 text-lg lg:text-xl"
+        className="space-y-5 text-lg text-gray-700 md:space-y-7 dark:text-gray-200 lg:text-xl"
         components={renderers}>
         {post.content}
       </ReactMarkdown>
