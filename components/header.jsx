@@ -12,7 +12,7 @@ function Header() {
   const lightIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="stroke-current stroke-1 h-5 w-5 text-gray-800"
+      className="w-5 h-5 text-gray-800 stroke-current stroke-1"
       viewBox="0 0 20 20"
       fill="currentColor">
       <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
@@ -22,7 +22,7 @@ function Header() {
   const darkIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="stroke-current stroke-1 h-5 w-5 text-gray-50"
+      className="w-5 h-5 stroke-current stroke-1 text-gray-50"
       viewBox="0 0 20 20"
       fill="currentColor">
       <path
@@ -38,7 +38,7 @@ function Header() {
       aria-label="Toggle Dark Mode"
       type="button"
       onClick={themeHandler}
-      className="p-3 bg-gray-200 dark:bg-gray-800 rounded focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
+      className="p-3 bg-gray-200 rounded dark:bg-gray-800 focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
       {lightIcon}
     </button>
   );
@@ -48,17 +48,17 @@ function Header() {
       aria-label="Toggle Dark Mode"
       type="button"
       onClick={themeHandler}
-      className="p-3 bg-gray-200 dark:bg-gray-800 rounded focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
+      className="p-3 bg-gray-200 rounded dark:bg-gray-800 focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
       {darkIcon}
     </button>
   );
 
   return (
-    <header className="py-6 md:py-10 fixed top-0 left-0 w-full bg-white dark:bg-black z-10">
-      <div className="container mx-auto px-5 md:px-10">
+    <header className="fixed top-0 left-0 z-10 w-full py-6 bg-white md:py-8 dark:bg-black">
+      <div className="container px-5 mx-auto md:px-10">
         <nav className="flex items-center justify-between text-gray-800 dark:text-gray-50">
           {theme === "light" ? lightButton : darkButton}
-          <div className="space-x-4 md:space-x-7 text-lg">
+          <div className="space-x-4 text-lg md:space-x-7">
             <Link href="/">
               <a>Home</a>
             </Link>
