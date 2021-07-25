@@ -22,6 +22,7 @@ module.exports = {
             "h2,h3,h4": {
               color: theme("colors.gray.700"),
             },
+            strong: { color: theme("colors.gray.700") },
             pre: { backgroundColor: theme("colors.white") },
             code: { color: theme("colors.pink.500") },
             "blockquote p:first-of-type::before": false,

@@ -33,6 +33,10 @@ function PostContent({ post }) {
 
     code(code) {
       const { className, children } = code;
+
+      if (!className) {
+        return `${children}`;
+      }
       const language = className.split("-")[1];
 
       return (
@@ -49,7 +53,7 @@ function PostContent({ post }) {
   return (
     <article className="container py-20 mx-auto">
       <ReactMarkdown
-        className="space-y-5 text-lg prose text-gray-700 md:prose-lg lg:prose-lg xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
+        className="space-y-5 text-lg prose text-gray-700 2xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
         components={renderers}>
         {post.content}
       </ReactMarkdown>
