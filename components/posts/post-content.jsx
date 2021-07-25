@@ -1,21 +1,14 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import materialLight from "react-syntax-highlighter/dist/cjs/styles/prism/material-light";
 import materialDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
-
-import { useTheme } from "../../store/theme-context";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("bash", bash);
 
 function PostContent({ post }) {
-  const { theme } = useTheme();
-
-  const syntaxStyle = theme === "light" ? materialLight : materialDark;
-
   const renderers = {
     p(paragraph) {
       const { node } = paragraph;
@@ -45,7 +38,7 @@ function PostContent({ post }) {
       return (
         <SyntaxHighlighter
           className="overflow-x-scroll rounded"
-          style={syntaxStyle}
+          style={materialDark}
           language={language}>
           {children}
         </SyntaxHighlighter>

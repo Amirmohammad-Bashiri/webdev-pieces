@@ -35,7 +35,7 @@ undefined === undefined; // => true
 null === undefined; // => false
 ```
 
-4. If one of the values is NaN, then they are not equal. (NaN is never equal to any other value including itself)
+4. If one of the values is **NaN**, then they are not equal. (**NaN** is never equal to any other value including itself)
 
 ```jsx
 "Not a Number" === NaN; // => false;
@@ -45,11 +45,6 @@ NaN === NaN; // => false;
 5. If both values have the type **number** and the same value, then they are equal:
 
 ```jsx
-const a = 3;
-const b = 3;
-const c = "5";
-const d = 5;
-
 3 === 3; // => true
 0 === -0; // => true
 5 === "5"; // => false
