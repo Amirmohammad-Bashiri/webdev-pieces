@@ -54,7 +54,7 @@ function Header() {
   );
 
   return (
-    <header className="fixed top-0 left-0 z-10 w-full py-6 bg-white md:py-8 dark:bg-black">
+    <header className="fixed top-0 left-0 z-10 w-full py-6 bg-white md:py-7 2xl:py-8 dark:bg-black">
       <div className="container px-5 mx-auto md:px-10">
         <nav className="flex items-center justify-between text-gray-800 dark:text-gray-50">
           {theme === "light" ? lightButton : darkButton}

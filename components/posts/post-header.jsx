@@ -5,10 +5,10 @@ function PostHeader({ title, date, image, slug }) {
 
   return (
     <div>
-      <h1 className="font-bold text-4xl md:text-5xl tracking-wider text-gray-900 dark:text-gray-50 mb-4 md:mb-6">
+      <h1 className="mb-4 text-3xl font-bold tracking-wider text-gray-900 xl:text-5xl 2xl:text-5xl md:text-4xl md:text-5xl dark:text-gray-50 md:mb-6">
         {title}
       </h1>
-      <p className="text-base text-gray-600 dark:text-gray-400 mb-5 md:mb-7">
+      <p className="mb-5 text-base text-gray-600 2xl:text-lg dark:text-gray-400 md:mb-7">
         {date}
       </p>
 
