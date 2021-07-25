@@ -6,7 +6,7 @@ import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 function PostDetailPage({ post }) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
-  const postUrl = ``;
+  const postUrl = `https://webdev-nuggets.vercel.app/posts/${post.slug}`;
 
   return (
     <main className="bg-white pt-28 md:pt-40 dark:bg-black">
@@ -16,15 +16,13 @@ function PostDetailPage({ post }) {
         <meta name="twitter:card" content="summary" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={imagePath} />
-        <meta
-          property="og:url"
-          content={`https://webdev-nuggets.vercel.app/posts/${post.slug}`}
-        />
+        <meta property="og:image" itemProp="image" content={imagePath} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={postUrl} />
       </Head>
       <div className="container px-6 py-10 mx-auto md:px-14 lg:px-32">
         <PostHeader
-          title={[post.title]}
+          title={post.title}
           date={post.date}
           image={post.image}
           slug={post.slug}
