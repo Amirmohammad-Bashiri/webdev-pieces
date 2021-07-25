@@ -50,9 +50,9 @@ const b = 3;
 const c = "5";
 const d = 5;
 
-a === b; // => true
+3 === 3; // => true
 0 === -0; // => true
-c === d; // => false
+5 === "5"; // => false
 ```
 
 6. If both values refer to the same object, they are equal. Since Javascript objects are compared by reference and not by value if two objects have identical properties but refer to different objects they are not equal.

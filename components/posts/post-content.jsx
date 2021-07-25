@@ -56,7 +56,7 @@ function PostContent({ post }) {
   return (
     <article className="container py-20 mx-auto">
       <ReactMarkdown
-        className="space-y-5 text-lg prose text-gray-700 lg:prose-lg xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
+        className="space-y-5 text-lg prose text-gray-700 md:prose-lg 2xl:prose-2xl lg:prose-lg xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
         components={renderers}>
         {post.content}
       </ReactMarkdown>

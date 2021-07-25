@@ -19,6 +19,9 @@ module.exports = {
               },
               code: { color: theme("colors.blue.400") },
             },
+            "h2,h3,h4": {
+              color: theme("colors.gray.700"),
+            },
             pre: { backgroundColor: theme("colors.white") },
             code: { color: theme("colors.pink.500") },
             "blockquote p:first-of-type::before": false,
@@ -41,7 +44,7 @@ module.exports = {
               color: theme("colors.gray.300"),
             },
             "h2,h3,h4": {
-              color: theme("colors.gray.100"),
+              color: theme("colors.gray.200"),
             },
             hr: { borderColor: theme("colors.gray.700") },
             ol: {
