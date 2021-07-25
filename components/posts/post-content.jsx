@@ -24,12 +24,12 @@ function PostContent({ post }) {
         const image = node.children[0];
 
         return (
-          <div className="my-20 text-center">
+          <div className={classes.image}>
             <Image
               src={`/images/posts/${post.slug}/${image.properties.src}`}
               alt={image.alt}
-              width={800}
-              height={400}
+              width={600}
+              height={300}
             />
           </div>
         );
@@ -56,7 +56,7 @@ function PostContent({ post }) {
   return (
     <article className="container py-20 mx-auto">
       <ReactMarkdown
-        className="space-y-5 text-lg text-gray-700 md:space-y-7 dark:text-gray-200 lg:text-xl"
+        className="space-y-5 text-lg prose text-gray-700 lg:prose-lg xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
         components={renderers}>
         {post.content}
       </ReactMarkdown>

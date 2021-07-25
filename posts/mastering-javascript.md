@@ -7,39 +7,26 @@ isPopular: true
 date: "2021-10-30"
 ---
 
-JavaScript powers the web - it's **the** most important programming language you need to know as a web developer.
+NextJS is a **framework for ReactJS**.
 
-For example, you should understand code like this:
+Wait a second ... a "framework" for React? Isn't React itself already a framework for JavaScript?
 
-```js
-const basics = 'Okay, that should not be too difficult actually';
+Well ... first of all, React is a "library" for JavaScript. That seems to be important for some people.
 
-function printBasics() {
-  console.log(basics):
-}
+Not for me, but still, there is a valid point: React already is a framework / library for JavaScript. So it's already an extra layer on top of JS.
 
-printBasics();
-```
+## Why would we then need NextJS?
 
-```bash
-# bash
-npm install react
-```
+Because NextJS makes building React apps easier - especially React apps that should have server-side rendering (though it does way more than just take care of that).
 
-```jsx
-import React, { useState } from "react";
+In this article, we'll dive into the core concepts and features NextJS has to offer:
 
-function App() {
-  const [count, setCount] = useState(0);
+- File-based Routing
+- Built-in Page Pre-rendering
+- Rich Data Fetching Capabilities
+- Image Optimization
+- Much More
 
-  return (
-    <div>
-      <button onClick={() => setCount(prevState => prevState + 1)}>
-        {count}
-      </button>
-    </div>
-  );
-}
-```
+## File-based Routing
 
-Learn more about it [here](https://academind.com).
+... More content ...
