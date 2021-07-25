@@ -1,9 +1,11 @@
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
+import dynamic from "next/dynamic";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import materialDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+
+const ReactMarkdown = dynamic(() => import("react-markdown"));
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("bash", bash);
