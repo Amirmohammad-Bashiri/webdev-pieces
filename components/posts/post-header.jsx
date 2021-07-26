@@ -15,7 +15,7 @@ function PostHeader({ title, date, imageUrl, blurredImageUrl }) {
           className="relative h-0"
           style={{
             paddingTop: `${(650 / 900) * 100}%`,
-            backgroundImage: `url(${blurredImageUrl})`,
+            backgroundImage: `url(${blurredImageUrl}.jpg)`,
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
             backgroundSize: `100%`,
@@ -23,7 +23,7 @@ function PostHeader({ title, date, imageUrl, blurredImageUrl }) {
           <div className="absolute top-0 left-0">
             <Image
               className="rounded"
-              src={imageUrl}
+              src={`${imageUrl}.jpg`}
               alt={title}
               width={900}
               height={650}

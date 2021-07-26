@@ -43,7 +43,6 @@ module.exports = {
     ];
   },
   images: {
-	  domains: ["https://res.cloudinary.com"],
-	  path: "/_next/image",
+    domains: ["res.cloudinary.com"],
   },
 };
