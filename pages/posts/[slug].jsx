@@ -1,19 +1,25 @@
 import Head from "next/head";
-import { buildUrl } from "cloudinary-build-url";
 
 import PostHeader from "../../components/posts/post-header";
 import PostContent from "../../components/posts/post-content";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
-import { cldUrlGenerator } from "../../lib/cldUrlGenerator";
+import {
+  cldUrlGenerator,
+  buildImageUrl,
+  buildBlurredImageUrl,
+} from "../../lib/image-util";
 
 function PostDetailPage({ post }) {
-  const url = buildUrl(post.slug, {
-    cloud: {
-      cloudName: "dskxzyzbh",
-    },
-  });
+  const url = buildImageUrl(post.slug, "dskxzyzbh");
+
+  const urlBlurred = buildBlurredImageUrl(post.slug, "dskxzyzbh", 1000, 1);
 
   const imageUrl = cldUrlGenerator(url, "webdev-nuggets", post.slug);
+  const blurredImageUrl = cldUrlGenerator(
+    urlBlurred,
+    "webdev-nuggets",
+    post.slug
+  );
 
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
   const postUrl = `https://webdev-nuggets.vercel.app/posts/${post.slug}`;
@@ -30,12 +36,12 @@ function PostDetailPage({ post }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={postUrl} />
       </Head>
-      <div className="container px-6 py-10 mx-auto md:px-14 lg:px-32">
+      <div className="container px-6 pb-10 mx-auto 2xl:pt-10 md:px-14 lg:px-32">
         <PostHeader
           title={post.title}
           date={post.date}
           imageUrl={imageUrl}
-          slug={post.slug}
+          blurredImageUrl={blurredImageUrl}
         />
         <PostContent post={post} />
       </div>
