@@ -50,8 +50,7 @@ function PostDetailPage({ post }) {
 }
 
 export function getStaticProps(context) {
-  const { params } = context;
-  const { slug } = params;
+  const { slug } = context.params;
 
   const postData = getPostData(slug);
 
