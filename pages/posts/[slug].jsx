@@ -1,10 +1,20 @@
 import Head from "next/head";
+import { buildUrl } from "cloudinary-build-url";
 
 import PostHeader from "../../components/posts/post-header";
 import PostContent from "../../components/posts/post-content";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
+import { cldUrlGenerator } from "../../lib/cldUrlGenerator";
 
 function PostDetailPage({ post }) {
+  const url = buildUrl(post.slug, {
+    cloud: {
+      cloudName: "dskxzyzbh",
+    },
+  });
+
+  const imageUrl = cldUrlGenerator(url, "webdev-nuggets", post.slug);
+
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
   const postUrl = `https://webdev-nuggets.vercel.app/posts/${post.slug}`;
 
@@ -24,7 +34,7 @@ function PostDetailPage({ post }) {
         <PostHeader
           title={post.title}
           date={post.date}
-          image={post.image}
+          imageUrl={imageUrl}
           slug={post.slug}
         />
         <PostContent post={post} />

@@ -61,7 +61,7 @@ obj1 === obj2; // => false
 
 ## Abstract Equality Operator (==)
 
-The **==** operator, as you can tell by the name, is less strict.
+The `==` operator, as you can tell by the name, is less strict.
 It first checks the type of operands and, if they are not the same, it does some type conversions and tries the comparison again.
 The process goes like this:
 

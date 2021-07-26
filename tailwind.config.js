@@ -24,7 +24,11 @@ module.exports = {
             },
             strong: { color: theme("colors.gray.700") },
             pre: { backgroundColor: theme("colors.white") },
-            code: { color: theme("colors.pink.500") },
+            code: {
+              color: theme("colors.pink.500"),
+              backgroundColor: theme("colors.gray.100"),
+              borderRadius: theme("rounded"),
+            },
             "blockquote p:first-of-type::before": false,
             "blockquote p:last-of-type::after": false,
           },
