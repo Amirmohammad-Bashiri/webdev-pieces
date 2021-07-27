@@ -6,17 +6,22 @@ import { getPostData, getPostsFiles } from "../../lib/posts-util";
 import {
   cldUrlGenerator,
   buildImageUrl,
-  buildBlurredImageUrl,
+  buildPixelatedImageUrl,
 } from "../../lib/image-util";
 
 function PostDetailPage({ post }) {
   const url = buildImageUrl(post.slug, "dskxzyzbh");
 
-  const urlBlurred = buildBlurredImageUrl(post.slug, "dskxzyzbh", 1000, 1);
+  const pixlatedUrl = buildPixelatedImageUrl(
+    post.slug,
+    "dskxzyzbh",
+    "pixelate",
+    40
+  );
 
   const imageUrl = cldUrlGenerator(url, "webdev-nuggets", post.slug);
-  const blurredImageUrl = cldUrlGenerator(
-    urlBlurred,
+  const pixelatedImageUrl = cldUrlGenerator(
+    pixlatedUrl,
     "webdev-nuggets",
     post.slug
   );
@@ -41,7 +46,7 @@ function PostDetailPage({ post }) {
           title={post.title}
           date={post.date}
           imageUrl={imageUrl}
-          blurredImageUrl={blurredImageUrl}
+          pixelatedImageUrl={pixelatedImageUrl}
         />
         <PostContent post={post} />
       </div>
