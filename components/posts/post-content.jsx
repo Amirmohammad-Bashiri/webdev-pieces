@@ -53,7 +53,7 @@ function PostContent({ post }) {
   };
 
   return (
-    <article className="container py-20 mx-auto">
+    <article className="container py-12 mx-auto">
       <ReactMarkdown
         className="space-y-5 text-lg prose text-gray-700 2xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
         components={renderers}>

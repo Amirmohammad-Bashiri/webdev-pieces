@@ -3,6 +3,8 @@ id: "1"
 title: Equality And Inequality Operators In Javascript
 excerpt: Learn how the comparison operators in javascript work
 image: equality-and-inequality-operators.jpg
+imageOwner: Clément Hélardot
+imageOwnerAddress: https://unsplash.com/@clemhlrdt
 isPopular: true
 date: "2021-07-24"
 ---

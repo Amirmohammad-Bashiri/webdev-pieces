@@ -47,6 +47,8 @@ function PostDetailPage({ post }) {
           date={post.date}
           imageUrl={imageUrl}
           pixelatedImageUrl={pixelatedImageUrl}
+          imageOwner={post.imageOwner}
+          imageOwnerAddress={post.imageOwnerAddress}
         />
         <PostContent post={post} />
       </div>
