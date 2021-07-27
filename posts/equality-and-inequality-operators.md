@@ -7,7 +7,7 @@ isPopular: true
 date: "2021-07-24"
 ---
 
-In Javascript, if we want to check whether two values are the same, we use the `==` and `===` operators.
+In Javascript, if we want to check whether two values are the same, we use the **==** and **===** operators.
 These operators both return **true** if their operands are the same and **false** if they are different.
 
 ## Strict Equality (===)
@@ -61,14 +61,14 @@ obj1 === obj2; // => false
 
 ## Abstract Equality Operator (==)
 
-The `==` operator, as you can tell by the name, is less strict.
+The **==** operator, as you can tell by the name, is less strict.
 It first checks the type of operands and, if they are not the same, it does some type conversions and tries the comparison again.
 The process goes like this:
 
 1. If both operands have the same type, it will test them for strict equality. If they are strictly equal, then they are equal else, they are not.
 
 ```jsx
-23 == 23; // => Types and values are the same so it will return true
+23 == 23; // => Type and value are the same so it will evaluate to true
 ```
 
 2. If they don't have the same type, the **==** operator uses the following rules to check for equality:

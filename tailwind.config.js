@@ -19,16 +19,17 @@ module.exports = {
               },
               code: { color: theme("colors.blue.400") },
             },
+            code: {
+              color: theme("colors.pink.500"),
+              backgroundColor: theme("colors.gray.100"),
+              borderRadius: "0.125rem",
+            },
             "h2,h3,h4": {
               color: theme("colors.gray.700"),
             },
             strong: { color: theme("colors.gray.700") },
             pre: { backgroundColor: theme("colors.white") },
-            code: {
-              color: theme("colors.pink.500"),
-              backgroundColor: theme("colors.gray.100"),
-              borderRadius: theme("rounded"),
-            },
+
             "blockquote p:first-of-type::before": false,
             "blockquote p:last-of-type::after": false,
           },
@@ -42,6 +43,11 @@ module.exports = {
                 color: theme("colors.blue.600"),
               },
               code: { color: theme("colors.blue.400") },
+            },
+            code: {
+              color: theme("colors.pink.500"),
+              backgroundColor: theme("colors.gray.200"),
+              borderRadius: "0.125rem",
             },
             pre: { backgroundColor: theme("colors.black") },
             blockquote: {

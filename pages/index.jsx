@@ -5,7 +5,7 @@ import { getPopularPosts } from "../lib/posts-util";
 
 function HomePage({ popularPosts }) {
   return (
-    <section className="pt-32 md:pt-44">
+    <section className="pt-32 2xl:pt-36">
       <Head>
         <title>Webdev Nuggets</title>
         <meta

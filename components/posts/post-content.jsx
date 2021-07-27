@@ -37,8 +37,6 @@ function PostContent({ post }) {
       const { className, children } = code;
 
       if (!className) {
-        console.log(children.toString().replace("`", ""));
-        const cleanedCode = children.toString();
         return <code>{children.toString()}</code>;
       }
       const language = className.split("-")[1];
