@@ -53,11 +53,13 @@ function Header() {
     </button>
   );
 
+  const themeButton = theme !== "light" ? darkButton : lightButton;
+
   return (
     <header className="fixed top-0 left-0 z-10 w-full py-6 bg-white md:py-7 2xl:py-8 dark:bg-black">
-      <div className="container px-5 mx-auto md:px-20 2xl:px-10">
+      <div className="container px-5 mx-auto md:px-10 lg:px-20 2xl:px-10">
         <nav className="flex items-center justify-between text-gray-800 dark:text-gray-50">
-          {theme === "light" ? lightButton : darkButton}
+          {themeButton}
           <div className="space-x-4 text-lg md:space-x-7">
             <Link href="/">
               <a>Home</a>
