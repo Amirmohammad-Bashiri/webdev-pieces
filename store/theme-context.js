@@ -1,15 +1,14 @@
-import {createContext, useContext, useState, useEffect} from "react";
-
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
 
 function ThemeProvider(props) {
   const [theme, setTheme] = useState();
-  
+
   useEffect(() => {
-    const storedTheme = JSON.parse(localStorage.getItem("theme")) || "light";
+    const storedTheme = JSON.parse(localStorage.getItem("theme")) || "dark";
     setTheme(storedTheme);
-  }, [])
+  }, []);
 
   const toggleTheme = theme => {
     setTheme(theme);
@@ -17,11 +16,11 @@ function ThemeProvider(props) {
     if (theme) {
       window.localStorage.setItem("theme", JSON.stringify(theme));
     }
-  }
+  };
 
-  const context = {theme, toggleTheme};
+  const context = { theme, toggleTheme };
 
-  return <ThemeContext.Provider value={context} {...props} />
+  return <ThemeContext.Provider value={context} {...props} />;
 }
 
 export function useTheme() {
