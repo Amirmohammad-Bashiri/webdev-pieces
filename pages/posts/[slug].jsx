@@ -44,8 +44,7 @@ function PostDetailPage({ post }) {
   // Getting post reading time
   useEffect(() => {
     if (post.content) {
-      const time = calculateReadingTime(post.content);
-      setPostReadTime(time);
+      calculateReadingTime(post.content).then(time => setPostReadTime(time));
     }
   }, [setPostReadTime, post.content]);
 
