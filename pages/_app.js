@@ -1,4 +1,4 @@
-// import Script from "next/script";
+import Script from "next/script";
 
 import ThemeProvider from "../store/theme-context";
 
@@ -9,8 +9,8 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <Script
-        strategy="afterInteractive"
+      <Script
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
       <Script>
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
 
             gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
           `}
-      </Script> */}
+      </Script>
       <ThemeProvider>
         <Layout>
           <Component {...pageProps} />
