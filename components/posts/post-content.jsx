@@ -1,4 +1,3 @@
-import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -13,7 +12,7 @@ const ReactMarkdown = dynamic(() => import("react-markdown"));
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("bash", bash);
 
-function PostContent({ post, articleRef, setPostReadTime }) {
+function PostContent({ post }) {
   const renderers = {
     p(paragraph) {
       const { node } = paragraph;
@@ -67,18 +66,7 @@ function PostContent({ post, articleRef, setPostReadTime }) {
     </ReactMarkdown>
   );
 
-  useEffect(() => {
-    if (articleRef.current.innerText) {
-      const time = calculateReadingTime(articleRef.current.innerText);
-      setPostReadTime(time);
-    }
-  }, [articleRef, setPostReadTime]);
-
-  return (
-    <article ref={articleRef} className="container py-12 mx-auto">
-      {markdown}
-    </article>
-  );
+  return <article className="container py-12 mx-auto">{markdown}</article>;
 }
 
 export default PostContent;

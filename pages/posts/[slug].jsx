@@ -1,9 +1,10 @@
-import { useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
 import PostHeader from "../../components/posts/post-header";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
+import { calculateReadingTime } from "../../lib/post-util";
 import {
   cldUrlGenerator,
   buildImageUrl,
@@ -15,7 +16,6 @@ const PostContent = dynamic(() =>
 );
 
 function PostDetailPage({ post }) {
-  const articleRef = useRef();
   const [postReadTime, setPostReadTime] = useState(0);
 
   const url = buildImageUrl(
@@ -40,6 +40,13 @@ function PostDetailPage({ post }) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
   const postUrl = `https://webdev-nuggets.vercel.app/posts/${post.slug}`;
 
+  useEffect(() => {
+    if (post.content) {
+      const time = calculateReadingTime(post.content);
+      setPostReadTime(time);
+    }
+  }, [setPostReadTime, post.content]);
+
   return (
     <main className="bg-white pt-28 md:pt-40 dark:bg-black">
       <Head>
@@ -62,11 +69,7 @@ function PostDetailPage({ post }) {
           imageOwnerAddress={post.imageOwnerAddress}
           postReadTime={postReadTime}
         />
-        <PostContent
-          post={post}
-          setPostReadTime={setPostReadTime}
-          articleRef={articleRef}
-        />
+        <PostContent post={post} setPostReadTime={setPostReadTime} />
       </div>
     </main>
   );
