@@ -1,11 +1,9 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
-
-import { calculateReadingTime } from "../../lib/post-util";
 
 const ReactMarkdown = dynamic(() => import("react-markdown"));
 
@@ -49,7 +47,7 @@ function PostContent({ post }) {
       return (
         <SyntaxHighlighter
           className="overflow-x-scroll rounded"
-          style={materialDark}
+          style={dracula}
           language={language}
           showLineNumbers={true}>
           {codeData}

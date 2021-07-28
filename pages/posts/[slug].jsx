@@ -18,6 +18,7 @@ const PostContent = dynamic(() =>
 function PostDetailPage({ post }) {
   const [postReadTime, setPostReadTime] = useState(0);
 
+  // Building image urls
   const url = buildImageUrl(
     post.slug,
     process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME
@@ -40,6 +41,7 @@ function PostDetailPage({ post }) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
   const postUrl = `https://webdev-nuggets.vercel.app/posts/${post.slug}`;
 
+  // Getting post reading time
   useEffect(() => {
     if (post.content) {
       const time = calculateReadingTime(post.content);
