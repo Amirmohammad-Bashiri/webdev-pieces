@@ -25,6 +25,8 @@ function Layout({ children }) {
           sizes="16x16"
           href="/favicon-16x16.png"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
       </Head>
       <div className="min-h-screen bg-white dark:bg-black">
         <div className="container max-w-6xl mx-auto">
