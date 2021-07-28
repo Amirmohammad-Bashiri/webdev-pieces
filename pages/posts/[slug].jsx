@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
@@ -14,6 +15,9 @@ const PostContent = dynamic(() =>
 );
 
 function PostDetailPage({ post }) {
+  const articleRef = useRef();
+  const [postReadTime, setPostReadTime] = useState(0);
+
   const url = buildImageUrl(
     post.slug,
     process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME
@@ -56,8 +60,13 @@ function PostDetailPage({ post }) {
           pixelatedImageUrl={pixelatedImageUrl}
           imageOwner={post.imageOwner}
           imageOwnerAddress={post.imageOwnerAddress}
+          postReadTime={postReadTime}
         />
-        <PostContent post={post} />
+        <PostContent
+          post={post}
+          setPostReadTime={setPostReadTime}
+          articleRef={articleRef}
+        />
       </div>
     </main>
   );
