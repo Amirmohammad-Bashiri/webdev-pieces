@@ -35,7 +35,7 @@ function Header() {
 
   const lightButton = (
     <button
-      aria-label="Toggle Dark Mode"
+      aria-label="Change Theme"
       type="button"
       onClick={themeHandler}
       className="p-3 bg-gray-200 rounded dark:bg-gray-800 focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
@@ -45,7 +45,7 @@ function Header() {
 
   const darkButton = (
     <button
-      aria-label="Toggle Dark Mode"
+      aria-label="Change Theme"
       type="button"
       onClick={themeHandler}
       className="p-3 bg-gray-200 rounded dark:bg-gray-800 focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
