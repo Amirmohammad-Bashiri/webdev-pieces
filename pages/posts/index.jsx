@@ -5,7 +5,7 @@ import PostsContainer from "../../container/posts-container";
 
 function PostsPage({ posts }) {
   return (
-    <section className="pt-32 md:pt-44">
+    <section className="pt-32 2xl:pt-36">
       <Head>
         <title>All Posts | Nuggets</title>
         <meta
