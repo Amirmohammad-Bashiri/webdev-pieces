@@ -1,7 +1,7 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import PostHeader from "../../components/posts/post-header";
-import PostContent from "../../components/posts/post-content";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
 import {
   cldUrlGenerator,
@@ -9,12 +9,19 @@ import {
   buildPixelatedImageUrl,
 } from "../../lib/image-util";
 
+const PostContent = dynamic(() =>
+  import("../../components/posts/post-content")
+);
+
 function PostDetailPage({ post }) {
-  const url = buildImageUrl(post.slug, "dskxzyzbh");
+  const url = buildImageUrl(
+    post.slug,
+    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME
+  );
 
   const pixlatedUrl = buildPixelatedImageUrl(
     post.slug,
-    "dskxzyzbh",
+    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME,
     "pixelate",
     40
   );
