@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sentry/nextjs": "^6.10.0",
     "cloudinary-build-url": "^0.2.1",
     "gray-matter": "^4.0.3",
     "next": "11.0.0",

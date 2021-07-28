@@ -14,6 +14,13 @@ function HomePage({ popularPosts }) {
         />
       </Head>
       <PostsContainer header="Popular Posts" posts={popularPosts} />
+      <button
+        type="button"
+        onClick={() => {
+          throw new Error("Sentry Frontend Error");
+        }}>
+        Throw error
+      </button>
     </section>
   );
 }
