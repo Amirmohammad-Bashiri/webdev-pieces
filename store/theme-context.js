@@ -6,7 +6,7 @@ function ThemeProvider(props) {
   const [theme, setTheme] = useState();
 
   useEffect(() => {
-    const storedTheme = JSON.parse(localStorage.getItem("theme")) || "dark";
+    const storedTheme = localStorage.getItem("theme") || "dark";
     setTheme(storedTheme);
   }, []);
 
@@ -14,7 +14,7 @@ function ThemeProvider(props) {
     setTheme(theme);
 
     if (theme) {
-      window.localStorage.setItem("theme", JSON.stringify(theme));
+      localStorage.setItem("theme", theme);
     }
   };
 
