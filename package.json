@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@createnextapp/async-local-storage": "^1.0.1",
     "cloudinary-build-url": "^0.2.1",
     "gray-matter": "^4.0.3",
     "next": "11.0.0",

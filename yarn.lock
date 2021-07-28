@@ -61,11 +61,6 @@
   dependencies:
     lodash.snakecase "^4.1.1"
 
-"@createnextapp/async-local-storage@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@createnextapp/async-local-storage/-/async-local-storage-1.0.1.tgz#9766fc15e88471fd4b0eb83079cd785863ca68d2"
-  integrity sha512-9C6WMjpp2qP9HE/R+rZcMt3ilqeXP6QdMhYzw5gy865xb8ZqYVnJbsLY3hK03qxwSIV8i7Vk4jTzCBdeGkRbuw==
-
 "@eslint/eslintrc@^0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.2.tgz#f63d0ef06f5c0c57d76c4ab5f63d3835c51b0179"

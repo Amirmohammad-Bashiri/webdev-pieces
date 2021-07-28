@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import AsyncLocalStorage from "@createnextapp/async-local-storage";
 
 const ThemeContext = createContext();
 
@@ -7,22 +6,15 @@ function ThemeProvider(props) {
   const [theme, setTheme] = useState();
 
   useEffect(() => {
-    // const storedTheme = localStorage.getItem("theme") || "dark";
-    AsyncLocalStorage.getItem("theme").then(storedTheme => {
-      if (storedTheme) {
-        setTheme(storedTheme);
-      } else {
-        setTheme("dark");
-      }
-    });
+    const storedTheme = localStorage.getItem("theme") || "light";
+    setTheme(storedTheme);
   }, []);
 
   const toggleTheme = theme => {
     setTheme(theme);
 
     if (theme) {
-      AsyncLocalStorage.setItem("theme", theme);
-      // localStorage.setItem("theme", theme);
+      localStorage.setItem("theme", theme);
     }
   };
 
