@@ -25,7 +25,6 @@ export function getStaticProps() {
     props: {
       posts,
     },
-    revalidate: 60 * 10,
   };
 }
 

@@ -85,7 +85,6 @@ export function getStaticProps(context) {
     props: {
       post: postData,
     },
-    revalidate: 24 * 60 * 60 * 5,
   };
 }
 

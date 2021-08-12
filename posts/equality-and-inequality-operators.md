@@ -25,8 +25,8 @@ After evaluating the operands, the strict equality operator compares the two val
 2. If both values are either **true** or **false**, then they are equal:
 
 ```jsx
-0 === -0; // => true
-"1" === "One"; // => true
+true === true; // => true
+false === false; // => true
 ```
 
 3. If both values are **null** or **undefined**, then they are equal:
