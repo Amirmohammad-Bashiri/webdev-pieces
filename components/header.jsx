@@ -38,7 +38,7 @@ function Header() {
       aria-label="Change Theme"
       type="button"
       onClick={themeHandler}
-      className="p-3 bg-gray-200 rounded dark:bg-gray-800 focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
+      className="p-3 bg-gray-200 rounded focus:border-dotted focus:border-gray-100">
       {lightIcon}
     </button>
   );
@@ -48,7 +48,7 @@ function Header() {
       aria-label="Change Theme"
       type="button"
       onClick={themeHandler}
-      className="p-3 bg-gray-200 rounded dark:bg-gray-800 focus:border-dotted focus:border-gray-100 dark:focus:border-dotted dark:focus:border-white">
+      className="p-3 bg-gray-800 rounded focus:border-dotted focus:border-gray-100">
       {darkIcon}
     </button>
   );
