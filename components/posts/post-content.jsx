@@ -19,7 +19,7 @@ function PostContent({ post }) {
         const image = node.children[0];
 
         return (
-          <div className={classes.image}>
+          <div>
             <Image
               src={`/images/posts/${post.slug}/${image.properties.src}`}
               alt={image.alt}
@@ -58,13 +58,13 @@ function PostContent({ post }) {
 
   const markdown = (
     <ReactMarkdown
-      className="space-y-5 text-lg prose text-gray-700 2xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
+      className="min-w-full space-y-5 text-lg prose text-gray-700 xl:prose-xl dark:prose-dark md:space-y-7 dark:text-gray-200 lg:text-xl"
       components={renderers}>
       {post.content}
     </ReactMarkdown>
   );
 
-  return <article className="container py-12 mx-auto">{markdown}</article>;
+  return <article className="py-12">{markdown}</article>;
 }
 
 export default PostContent;

@@ -28,11 +28,23 @@ module.exports = {
               color: theme("colors.gray.700"),
             },
             strong: { color: theme("colors.gray.700") },
-            pre: { backgroundColor: theme("colors.white") },
-
+            pre: {
+              padding: 0,
+              backgroundColor: theme("colors.white"),
+            },
             "blockquote p:first-of-type::before": false,
             "blockquote p:last-of-type::after": false,
           },
+        },
+        xl: {
+          css: [
+            {
+              pre: {
+                padding: 0,
+                backgroundColor: theme("colors.white"),
+              },
+            },
+          ],
         },
         dark: {
           css: {
@@ -49,7 +61,10 @@ module.exports = {
               backgroundColor: theme("colors.gray.200"),
               borderRadius: "0.125rem",
             },
-            pre: { backgroundColor: theme("colors.black") },
+            pre: {
+              padding: 0,
+              backgroundColor: theme("colors.black"),
+            },
             blockquote: {
               borderLeftColor: theme("colors.gray.700"),
               color: theme("colors.gray.300"),

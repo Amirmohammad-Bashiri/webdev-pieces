@@ -38,7 +38,7 @@ function Header() {
       aria-label="Change Theme"
       type="button"
       onClick={themeHandler}
-      className="p-3 bg-gray-200 rounded focus:border-dotted focus:border-gray-100">
+      className="p-3 bg-gray-200 rounded focus:border-dotted focus:border-gray-500">
       {lightIcon}
     </button>
   );
