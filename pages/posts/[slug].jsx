@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import readingTime from "reading-time";
 
 import PostHeader from "../../components/posts/post-header";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
-import { calculateReadingTime } from "../../lib/post-util";
+// import { calculateReadingTime } from "../../lib/post-util";
 import {
   cldUrlGenerator,
   buildImageUrl,
@@ -44,7 +45,9 @@ function PostDetailPage({ post }) {
   // Getting post reading time
   useEffect(() => {
     if (post.content) {
-      calculateReadingTime(post.content).then(time => setPostReadTime(time));
+      // calculateReadingTime(post.content).then(time => setPostReadTime(time));
+      const stats = readingTime(post.content);
+      setPostReadTime(stats.minutes);
     }
   }, [setPostReadTime, post.content]);
 
