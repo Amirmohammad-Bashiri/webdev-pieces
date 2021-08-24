@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 import PostHeader from "../../components/posts/post-header";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
-// import { calculateReadingTime } from "../../lib/post-util";
+import { calculateReadingTime } from "../../lib/post-util";
 import {
   cldUrlGenerator,
   buildImageUrl,
@@ -16,7 +16,7 @@ const PostContent = dynamic(() =>
 );
 
 function PostDetailPage({ post }) {
-  const [postReadTime, setPostReadTime] = useState(4);
+  const [postReadTime, setPostReadTime] = useState(0);
 
   // Building image urls
   const url = buildImageUrl(
@@ -42,11 +42,11 @@ function PostDetailPage({ post }) {
   const postUrl = `https://webdev-nuggets.vercel.app/posts/${post.slug}`;
 
   // Getting post reading time
-  // useEffect(() => {
-  //   if (post.content) {
-  //     calculateReadingTime(post.content).then(time => setPostReadTime(time));
-  //   }
-  // }, [setPostReadTime, post.content]);
+  useEffect(() => {
+    if (post.content) {
+      calculateReadingTime(post.content).then(time => setPostReadTime(time));
+    }
+  }, [setPostReadTime, post.content]);
 
   return (
     <main className="bg-white pt-28 md:pt-40 dark:bg-black">
