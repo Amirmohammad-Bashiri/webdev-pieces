@@ -4,7 +4,7 @@ import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
-const ReactMarkdown = dynamic(() => import("react-markdown"));
+import ReactMarkdown from "react-markdown";
 
 import { extractHeadingId, removeLastWord } from "../../lib/post-util";
 
