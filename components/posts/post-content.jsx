@@ -4,14 +4,36 @@ import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
-
 const ReactMarkdown = dynamic(() => import("react-markdown"));
+
+import { extractHeadingId, removeLastWord } from "../../lib/post-util";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("bash", bash);
 
 function PostContent({ post }) {
   const renderers = {
+    h1(heading) {
+      const headingText = heading.children[0];
+      const id = extractHeadingId(headingText);
+      const content = id ? removeLastWord(headingText) : heading.children;
+      return (
+        <div>
+          <h1 id={id ? id : undefined}>{content}</h1>
+        </div>
+      );
+    },
+    h2(heading) {
+      const headingText = heading.children[0];
+      const id = extractHeadingId(headingText);
+      const content = id ? removeLastWord(headingText) : heading.children;
+
+      return (
+        <div>
+          <h2 id={id ? id : undefined}>{content}</h2>
+        </div>
+      );
+    },
     p(paragraph) {
       const { node } = paragraph;
 

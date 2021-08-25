@@ -11,6 +11,7 @@
 html {
   background-color: "black";
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {

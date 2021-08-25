@@ -24,7 +24,7 @@ module.exports = {
               backgroundColor: theme("colors.gray.100"),
               borderRadius: "0.125rem",
             },
-            "h2,h3,h4": {
+            "h1,h2,h3,h4": {
               color: theme("colors.gray.700"),
             },
             strong: { color: theme("colors.gray.700") },
@@ -69,7 +69,7 @@ module.exports = {
               borderLeftColor: theme("colors.gray.700"),
               color: theme("colors.gray.300"),
             },
-            "h2,h3,h4": {
+            "h1,h2,h3,h4": {
               color: theme("colors.gray.200"),
             },
             hr: { borderColor: theme("colors.gray.700") },

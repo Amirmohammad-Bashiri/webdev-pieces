@@ -12,14 +12,19 @@ date: "2021-07-24"
 In Javascript, if we want to check whether two values are the same, we use the **==** and **===** operators.
 These operators both return **true** if their operands are the same and **false** if they are different.
 
-## Strict Equality (===)
+## Table of Contents
+
+1. [Strict Equality Operator](#strict-equality-operator)
+2. [Abstract Equality Operator](#abstract-equality-operator)
+
+## Strict Equality (===) {#strict-equality-operator}
 
 After evaluating the operands, the strict equality operator compares the two values like this:
 
 1. It first checks the type of values. If they have different types, then they are not equal:
 
 ```jsx
-"Not a number" === 69; // => false
+"69" === 69; // => false
 ```
 
 2. If both values are either **true** or **false**, then they are equal:
@@ -61,7 +66,7 @@ const obj2 = { name: "Garfield", color: "Orange", age: 43 };
 obj1 === obj2; // => false
 ```
 
-## Abstract Equality Operator (==)
+## Abstract Equality Operator (==) {#abstract-equality-operator}
 
 The **==** operator, as you can tell by the name, is less strict.
 It first checks the type of operands and, if they are not the same, it does some type conversions and tries the comparison again.
@@ -103,6 +108,6 @@ The process goes like this:
 
 ## Conclusion
 
-The strict equality operator (===) behaves the same as the abstract equality operator (==) except it does no type conversion and the types must be the same to be considered equal.
+Generally, it's always best to use the strict equality operator (===) to prevent some unexpected behaviors, it also increases the clarity of your code.
 
-The abstract equality operator (==) will first check the types, then it will do the comparison after doing any necessary type conversions.
+And that's it for this post. I hope after reading this you feel more confident using these operators.
