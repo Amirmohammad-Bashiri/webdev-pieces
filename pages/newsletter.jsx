@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import buildSvg from "../public/images/ui/building.svg";
+import specsSvg from "../public/images/ui/specs.svg";
 
 function newsletter() {
   return (
@@ -13,9 +13,9 @@ function newsletter() {
           content="Subscribe to get notified with the lastest posts"
         />
       </Head>
-      <div className="flex flex-col items-center justify-center space-y-5">
+      <div className="flex flex-col items-center justify-center">
         <div className="p-5">
-          <Image src={buildSvg} alt="Building" width={500} height={500} />
+          <Image src={specsSvg} alt="Building" width={500} height={500} />
         </div>
 
         <p className="text-xl font-bold tracking-wider text-gray-700 md:text-3xl dark:text-gray-400">
