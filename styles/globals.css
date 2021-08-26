@@ -17,3 +17,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 }
+
+.secondary-btn {
+  @apply px-8 py-3 mt-10 text-xl tracking-wide text-gray-800 transition-colors duration-500 ease-in-out border-2 border-black rounded dark:text-gray-200 dark:border-white md:px-10 md:py-4 md:text-2xl hover:bg-black hover:text-white dark:hover:text-black dark:hover:bg-white;
+}

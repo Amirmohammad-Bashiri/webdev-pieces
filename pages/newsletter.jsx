@@ -15,7 +15,7 @@ function newsletter() {
       </Head>
       <div className="flex flex-col items-center justify-center">
         <div className="p-5">
-          <Image src={specsSvg} alt="Building" width={500} height={500} />
+          <Image src={specsSvg} alt="Building svg" width={500} height={500} />
         </div>
 
         <p className="text-xl font-bold tracking-wider text-gray-700 md:text-3xl dark:text-gray-400">

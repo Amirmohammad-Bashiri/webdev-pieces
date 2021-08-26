@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { ErrorBoundary } from "react-error-boundary";
 
 import Header from "../components/header";
+import ErrorFallback from "../components/ErrorFallback";
 import { useTheme } from "../store/theme-context";
 
 function Layout({ children }) {
@@ -28,8 +30,12 @@ function Layout({ children }) {
       </Head>
       <div className="min-h-screen bg-white dark:bg-black">
         <div className="container max-w-6xl mx-auto">
-          <Header />
-          {children}
+          <ErrorBoundary
+            FallbackComponent={ErrorFallback}
+            onReset={() => location.reload()}>
+            <Header />
+            {children}
+          </ErrorBoundary>
         </div>
       </div>
     </div>
