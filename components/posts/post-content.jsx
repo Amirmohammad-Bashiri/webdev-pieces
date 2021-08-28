@@ -1,5 +1,4 @@
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";

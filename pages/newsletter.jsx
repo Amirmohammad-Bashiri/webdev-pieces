@@ -5,7 +5,7 @@ import specsSvg from "../public/images/ui/specs.svg";
 
 function newsletter() {
   return (
-    <main className="h-full pt-32 2xl:pt-36">
+    <main>
       <Head>
         <title>Webdev Nuggets | Newsletter</title>
         <meta
