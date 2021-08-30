@@ -7,7 +7,7 @@ function newsletter() {
   return (
     <main>
       <Head>
-        <title>Webdev Nuggets | Newsletter</title>
+        <title>Webdev Pieces | Newsletter</title>
         <meta
           name="description"
           content="Subscribe to get notified with the lastest posts"

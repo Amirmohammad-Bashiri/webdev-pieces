@@ -7,10 +7,10 @@ function HomePage({ popularPosts }) {
   return (
     <section className="pt-32 2xl:pt-36">
       <Head>
-        <title>Webdev Nuggets</title>
+        <title>Webdev Pieces</title>
         <meta
           name="description"
-          content="Small posts about web development which I call 'Nuggets' specifically about React, Next.JS and javascript"
+          content="I write posts about Javascript, React, Next.js and web development in general"
         />
       </Head>
       <PostsContainer header="Popular Posts" posts={popularPosts} />

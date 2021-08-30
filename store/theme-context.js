@@ -13,9 +13,7 @@ function ThemeProvider(props) {
   const toggleTheme = theme => {
     setTheme(theme);
 
-    if (theme) {
-      localStorage.setItem("theme", theme);
-    }
+    localStorage.setItem("theme", theme);
   };
 
   const context = { theme, toggleTheme };

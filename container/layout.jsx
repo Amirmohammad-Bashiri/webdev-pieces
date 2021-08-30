@@ -11,7 +11,7 @@ function Layout({ children }) {
   return (
     <div className={theme}>
       <Head>
-        <title>Webdev Nuggets</title>
+        <title>Webdev Pieces</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
