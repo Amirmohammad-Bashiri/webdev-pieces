@@ -46,5 +46,7 @@ module.exports = {
   images: {
     domains: ["res.cloudinary.com"],
     path: "/_next/image",
+    formats: ["image/avif", "image/webp"],
   },
+  swcMinify: true,
 };
